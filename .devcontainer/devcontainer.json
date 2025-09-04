@@ -1,0 +1,24 @@
+{
+    "name": "PJSIP Android Build Environment",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "11",
+            "installMaven": false,
+            "installGradle": false
+        },
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "ms-vscode.makefile-tools"
+            ]
+        }
+    },
+    "postCreateCommand": "echo '🚀 PJSIP Android Build Environment Ready!'",
+    "remoteUser": "vscode"
+}

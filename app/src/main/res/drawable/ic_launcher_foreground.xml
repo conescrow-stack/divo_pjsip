@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- DIVO Logo - Simple text representation -->
+    <path
+        android:fillColor="#FF0000"
+        android:pathData="M20,30 L88,30 L88,78 L20,78 Z"
+        android:strokeWidth="0" />
+    
+    <!-- D -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M25,35 L25,73 L35,73 Q45,73 45,63 L45,45 Q45,35 35,35 Z M30,40 L30,68 L40,68 Q42,68 42,66 L42,42 Q42,40 40,40 Z" />
+    
+    <!-- I -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,35 L50,73 L55,73 L55,35 Z" />
+    
+    <!-- V -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,35 L65,73 L70,35 L75,73 L80,35 L75,73 L70,35 L65,73 Z" />
+    
+    <!-- O -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M85,35 Q95,35 95,45 L95,63 Q95,73 85,73 Q75,73 75,63 L75,45 Q75,35 85,35 Z M80,40 Q78,40 78,42 L78,66 Q78,68 80,68 L90,68 Q92,68 92,66 L92,42 Q92,40 90,40 Z" />
+</vector>
