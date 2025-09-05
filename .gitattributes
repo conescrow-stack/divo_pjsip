@@ -1,1 +1,4 @@
 android-nkd-r25c/** filter=lfs diff=lfs merge=lfs -text
+android-ndk-r25c/toolchains/llvm/prebuilt/windows-x86_64/bin/*.exe filter=lfs diff=lfs merge=lfs -text
+android-ndk-r25c/toolchains/llvm/prebuilt/windows-x86_64/bin/*.dll filter=lfs diff=lfs merge=lfs -text
+android-ndk-r25c/toolchains/llvm/prebuilt/windows-x86_64/lib/python3.9/site-packages/lldb/*.exe filter=lfs diff=lfs merge=lfs -text
