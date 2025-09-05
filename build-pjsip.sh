@@ -12,16 +12,15 @@ echo "📦 Updating system packages..."
 sudo apt-get update
 sudo apt-get install -y build-essential wget unzip
 
-# Download Android NDK r25c
-echo "📱 Downloading Android NDK r25c..."
+# Use uploaded Android NDK r25c
+echo "📱 Using uploaded Android NDK r25c..."
 NDK_VERSION="r25c"
 NDK_DIR="/opt/android-ndk-${NDK_VERSION}"
 
 if [ ! -d "$NDK_DIR" ]; then
-    wget -O android-ndk.zip "https://dl.google.com/android/repository/android-ndk-${NDK_VERSION}-linux-x86_64.zip"
-    unzip android-ndk.zip
-    sudo mv "android-ndk-${NDK_VERSION}" /opt/
-    rm android-ndk.zip
+    echo "📋 Copying uploaded NDK to /opt/..."
+    sudo cp -r "android-ndk-${NDK_VERSION}" /opt/
+    echo "✅ NDK copied successfully!"
 fi
 
 # Set environment variables
