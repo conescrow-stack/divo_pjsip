@@ -5,17 +5,26 @@ plugins {
 }
 
 android {
-    namespace = "com.Fanuel.zobi"
+    namespace = "com.Fanuel.divo"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.Fanuel.zobi"
+        applicationId = "com.Fanuel.divo"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters += listOf("arm64-v8a", "x86_64")
+        }
+        
+        externalNativeBuild {
+            cmake {
+                cppFlags += ""
+            }
+        }
     }
 
     buildTypes {
@@ -27,6 +36,22 @@ android {
             )
         }
     }
+    
+    sourceSets {
+        getByName("main") {
+            jniLibs.srcDirs("src/main/jniLibs")
+        }
+    }
+    
+    packagingOptions {
+        pickFirst("lib/**/libc++_shared.so")
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
+    
+    ndkVersion = "25.2.9519653"
+    
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -59,6 +84,9 @@ dependencies {
     
     // DataStore for preferences
     implementation("androidx.datastore:datastore-preferences:1.0.0")
+    
+    // PJSIP dependencies
+    implementation(files("libs/pjsip.jar"))
     
     // Testing
     testImplementation(libs.junit)

@@ -20,6 +20,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "zobi"
+rootProject.name = "divo"
 include(":app")
  
